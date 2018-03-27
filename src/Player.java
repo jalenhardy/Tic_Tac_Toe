@@ -22,7 +22,10 @@ public class Player {
             System.out.println("Y Value: ");
             y = scanner.nextInt();
 
-        }while(!checkCoordinates(x, y, game.getCords()));
+        }while(!checkCoordinates(x, y, game.getCoordinates()));
+
+        // If coordinates are authentic
+        game.plot(character, x, y);
     }
 
     private boolean checkCoordinates(int x, int y, ArrayList<int []> coordinates){
