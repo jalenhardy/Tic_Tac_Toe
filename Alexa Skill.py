@@ -11,13 +11,23 @@ def get_input():
 
 @ask.launch
 def start_skill():
-    welcome_message = 'Hello there, would you like the news?'
+    welcome_message = 'Hello there, would you like to edit your website'
     return question(welcome_message)
 
 
-@ask.intent("colorIntent")
-def color():
-    return statement("Changed color to red")
+@ask.intent("YesIntent")
+def yes():
+    return statement("Ok, editing your website")
+
+
+@ask.intent("NoIntent")
+def no():
+    return statement("I do not know why you called me")
+
+
+@ask.intent('addIntent')
+def add(text, idNumber):
+    return question("ok adding {} to id tag {}".format(text, idNumber))
 
 
 if __name__ == "__main__":
