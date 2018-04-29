@@ -1,0 +1,51 @@
+from flask import Flask, render_template
+from flask_ask import Ask, statement, question, session
+import paramiko
+import os
+import sys
+
+app = Flask(__name__)
+ask = Ask(app, "/webEditor")
+s = pxssh.pxssh()
+
+def connect_to_website(url):
+    os.system("cd Docments/umbcHack/resume-April-24-2018")
+
+def get_input():
+    pass
+
+
+@ask.launch
+def start_skill():
+    welcome_message = 'Hello there, would you like to edit your website'
+    return question(welcome_message)
+
+
+@ask.intent("AMAZON.YesIntent")
+def yes():
+    return statement("Ok, editing your website")
+
+
+@ask.intent("AMAZON.NoIntent")
+def no():
+    return statement("I do not know why you called me")
+
+
+@ask.inten   s = pxssh.pxssh()
+    s.login('69.143.71.180','nick','namo4204121')
+    s.logout()
+    return statment("Update Complete")t('addIntent')
+def add(idNumber):
+    return question("What would you like to add to id {}".format(idNumber))
+
+
+@ask.intent('update website')
+def connectserver():
+    s = pxssh.pxssh()
+    s.login('69.143.71.180','nick','namo4204121')
+    s.logout()              
+    return statment("Update Complete")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
